@@ -11,6 +11,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="/assets/css/googlesearch">
 
     <!--Google Font link-->
     <link
@@ -96,6 +97,24 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+            <section>
+                <div class="main">
+                    <div class="searchBox">
+                        <input type="text" name="" class="query" value="">
+                </div>
+                <div class="button">
+                    <button class="searchBtn">Google 검색</button>
+
+                </div>
+                <p>Google 제공 서비스 : <span>Korean</span></p>
+                </div>
+                </section>
+
+
 
             <!-- Start Top Search -->
             <div class="top-search">
@@ -813,6 +832,17 @@
     function no() {
         alert("준비중입니다..");
     }
+
+
+
+    let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+
+        searchBtn.onclick = function() {
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url);
+            // window.open(url, '_self');
+        }
 </script>
 
 </html>
